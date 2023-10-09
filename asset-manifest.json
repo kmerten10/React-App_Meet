@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/React-App_Meet/static/css/main.073c9b0a.css",
+    "main.js": "/React-App_Meet/static/js/main.a5436efc.js",
+    "static/js/787.613ed862.chunk.js": "/React-App_Meet/static/js/787.613ed862.chunk.js",
+    "service-worker.js": "/React-App_Meet/service-worker.js",
+    "static/media/logo.svg": "/React-App_Meet/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "index.html": "/React-App_Meet/index.html",
+    "main.073c9b0a.css.map": "/React-App_Meet/static/css/main.073c9b0a.css.map",
+    "main.a5436efc.js.map": "/React-App_Meet/static/js/main.a5436efc.js.map",
+    "787.613ed862.chunk.js.map": "/React-App_Meet/static/js/787.613ed862.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.a5436efc.js"
+  ]
+}
