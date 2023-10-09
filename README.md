@@ -45,3 +45,6 @@ Then: the appropriate chart will be displayed for that event
 
 ## Serverless Function Usage
 In this app, serverless functions will be used for authentication by requesting and retrieving access tokens.
+
+
+
