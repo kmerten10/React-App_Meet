@@ -48,4 +48,12 @@ describe('<App /> integration', () => {
             expect(event.textContent).toContain('Berlin, Germany');
         });
     });
+
+    // test('number of events displayed updates based on user input', async () => {
+    //     const user = userEvent.setup();
+    //     const AppComponent = render(<App />);
+    //     const AppDOM = AppComponent.container.firstChild; 
+
+
+    // });
 });
