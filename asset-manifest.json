@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/React-App_Meet/static/css/main.f33078a8.css",
-    "main.js": "/React-App_Meet/static/js/main.d6f6d819.js",
+    "main.js": "/React-App_Meet/static/js/main.f4a2f9cf.js",
     "static/js/787.613ed862.chunk.js": "/React-App_Meet/static/js/787.613ed862.chunk.js",
     "service-worker.js": "/React-App_Meet/service-worker.js",
     "index.html": "/React-App_Meet/index.html",
     "main.f33078a8.css.map": "/React-App_Meet/static/css/main.f33078a8.css.map",
-    "main.d6f6d819.js.map": "/React-App_Meet/static/js/main.d6f6d819.js.map",
+    "main.f4a2f9cf.js.map": "/React-App_Meet/static/js/main.f4a2f9cf.js.map",
     "787.613ed862.chunk.js.map": "/React-App_Meet/static/js/787.613ed862.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f33078a8.css",
-    "static/js/main.d6f6d819.js"
+    "static/js/main.f4a2f9cf.js"
   ]
 }
