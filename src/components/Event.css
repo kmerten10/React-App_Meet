@@ -24,7 +24,7 @@ button:hover {
     background-color: rgb(204, 224, 198);
     border-radius: 7px;
     margin: 10px;
-    marker: none;
+    list-style-type: none;
 }
 
 li.event::marker {
