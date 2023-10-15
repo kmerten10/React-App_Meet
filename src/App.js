@@ -16,7 +16,7 @@ const App = () => {
   //why does useEffect have to go first?
   useEffect(() => {
     fetchData();
-  }, [currentCity]);
+  }, [currentCity, currentNOE]);
 
   const fetchData = async () => {
     const allEvents = await getEvents();
@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <NumberOfEvents />
+      <NumberOfEvents currentNOE={currentNOE} setCurrentNOE={setCurrentNOE} />
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
       <EventList events={events} />
     </div>

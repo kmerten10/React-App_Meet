@@ -3,12 +3,12 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
         const value = event.target.value;
 
         if (isNaN(value) || value > 50 || value <= 0) {
-            setErrorAlert('value must be a number between 0 and 50');
+            alert('value must be a number between 0 and 50');
         } else {
-            setErrorAlert('');
             setCurrentNOE(value);
         }
     };
+
     return (
         <div id="events-count">
             <input
