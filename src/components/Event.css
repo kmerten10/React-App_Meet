@@ -11,17 +11,21 @@ button {
     cursor: pointer;
     background-color: white;
     color: black;
-    border: 2px solid #4CAF50;
+    border: 2px solid #49744a;
 }
 
 button:hover {
-    background-color: #4CAF50;
+    background-color: #49744a;
     color: white;
 }
 
 .event {
-    border: 2px #4CAF50 solid;
-    background-color: rgb(205, 234, 195);
+    border: 2px #49744a solid;
+    background-color: rgb(204, 224, 198);
+    border-radius: 7px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    marker: none;
 }
 
 li.event::marker {

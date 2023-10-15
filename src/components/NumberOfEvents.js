@@ -1,3 +1,5 @@
+import "./NumberOfEvents.css";
+
 const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
     const handleInputChanged = (event) => {
         const value = event.target.value;
@@ -11,7 +13,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
 
     return (
         <div id="events-count">
-            <p>Enter Number Of Events</p>
+            <p>Select Number Of Events</p>
             <input
                 type="text"
                 defaultValue="32"

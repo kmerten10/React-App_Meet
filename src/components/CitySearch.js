@@ -29,6 +29,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
 
     return (
         <div id="city-search">
+            <p>Select a City</p>
             <input
                 type="text"
                 className="city"
