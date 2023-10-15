@@ -18,3 +18,12 @@ button:hover {
     background-color: #4CAF50;
     color: white;
 }
+
+.event {
+    border: 2px #4CAF50 solid;
+    background-color: rgb(205, 234, 195);
+}
+
+li.event::marker {
+    marker: none;
+}

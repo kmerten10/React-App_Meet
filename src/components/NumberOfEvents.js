@@ -11,6 +11,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
 
     return (
         <div id="events-count">
+            <p>Enter Number Of Events</p>
             <input
                 type="text"
                 defaultValue="32"
