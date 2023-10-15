@@ -27,6 +27,6 @@ button:hover {
     list-style-type: none;
 }
 
-li.event::marker {
-    marker: none;
+li {
+    list-style-type: none;
 }
