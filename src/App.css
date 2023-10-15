@@ -38,7 +38,7 @@
   }
 }
 
-.details-btn {
+button {
   border: none;
   color: white;
   padding: 16px 32px;
@@ -54,14 +54,7 @@
   border: 2px solid #4CAF50;
 }
 
-.details-btn:hover {
+button:hover {
   background-color: #4CAF50;
   color: white;
 }
-
-.details-btn {
-  background-color: darkgreen;
-
-}
-
-.event
