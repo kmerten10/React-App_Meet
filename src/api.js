@@ -1,4 +1,3 @@
-import mockData from './mock-data';
 
 export const extractLocations = (events) => {
     const extractedLocations = events.map((event) => event.location);
@@ -42,7 +41,6 @@ const removeQuery = () => {
 
 export const getEvents = async () => {
     if (window.location.href.startsWith('http://localhost')) {
-        return mockData;
     }
     const token = await getAccessToken();
 
