@@ -31,8 +31,8 @@ Then: the event element will be expanded to show the event details including
 
 Scenario: Specify number of events
 Given: the list of events was loaded
-When: the user selects a city
-Then: the number of events in that city will be returned
+When: the user selects a number of events
+Then: the number of events displayed will update based on the user input
 
 Scenario: Use the app when offline
 Given: the app was created to be functional offline
