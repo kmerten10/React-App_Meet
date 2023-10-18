@@ -21,7 +21,7 @@ defineFeature(feature, test => {
         });
 
         when('the user selects a number of events', async () => {
-            const button = AppComponent.queryByTestId('numberOfEventsInput');
+            const button = AppComponent.queryByTestId('events-count');
 
             await userEvent.type(button, '{backspace}{backspace}10');
         });

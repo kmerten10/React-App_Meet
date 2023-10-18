@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './event.css';
 
 const Event = ({ event }) => {
     const [showDetails, setShowDetails] = useState(false);

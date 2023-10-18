@@ -1,3 +1,5 @@
+import './NumberOfEvents.css';
+
 const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
     const handleInputChanged = (event) => {
         const value = event.target.value;
