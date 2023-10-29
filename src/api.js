@@ -1,4 +1,5 @@
 import mockData from './mock-data';
+import NProgress from 'nprogress';
 
 export const extractLocations = (events) => {
     const extractedLocations = events.map((event) => event.location);
@@ -45,7 +46,10 @@ const removeQuery = () => {
 };
 
 export const getEvents = async () => {
+    NProgress.start()
+
     if (window.location.href.startsWith('http://localhost')) {
+        NProgress.done();
         return mockData;
     }
     if (!navigator.onLine) {
@@ -62,6 +66,7 @@ export const getEvents = async () => {
         const response = await fetch(url);
         const result = await response.json();
         if (result) {
+            NProgress.done();
             return result.events;
         } else return null;
     }
