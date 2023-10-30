@@ -22,7 +22,7 @@ const checkToken = async (accessToken) => {
 const getToken = async (code) => {
     const encodeCode = encodeURIComponent(code);
     const response = await fetch(
-        'https://2dx56sozyi.execute-api.us-east-1.amazonaws.com/dev/api/token' + '/' + encodeCode
+        'https://dfwvtewl79.execute-api.us-east-1.amazonaws.com/dev/api/token' + '/' + encodeCode
     );
     const { access_token } = await response.json();
     access_token && localStorage.setItem("access_token", access_token);
@@ -62,7 +62,7 @@ export const getEvents = async () => {
 
     if (token) {
         removeQuery();
-        const url = "https://2dx56sozyi.execute-api.us-east-1.amazonaws.com/dev/api/get-events" + "/" + token;
+        const url = "https://dfwvtewl79.execute-api.us-east-1.amazonaws.com/dev/api/get-events" + "/" + token;
         const response = await fetch(url);
         const result = await response.json();
         if (result) {
@@ -83,7 +83,7 @@ export const getAccessToken = async () => {
         const code = await searchParams.get('code');
         if (!code) {
             const response = await fetch(
-                "https://2dx56sozyi.execute-api.us-east-1.amazonaws.com/dev/api/get-auth-url"
+                "https://dfwvtewl79.execute-api.us-east-1.amazonaws.com/dev/api/get-auth-url"
             );
             const result = await response.json();
             const { authUrl } = result;
