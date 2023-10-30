@@ -8,6 +8,7 @@ import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 
 
 import './App.css';
+// import EventGenresChart from './components/EventsGenresChart';
 
 
 const App = () => {
@@ -50,7 +51,10 @@ const App = () => {
         allLocations={allLocations}
         setCurrentCity={setCurrentCity}
         setInfoAlert={setInfoAlert} />
-      <CityEventsChart allLocations={allLocations} events={events} />
+      <div className='charts-container'>
+        <CityEventsChart allLocations={allLocations} events={events} />
+        {/* <EventGenresChart events={events} /> */}
+      </div>
       <EventList events={events} />
     </div>
   );
