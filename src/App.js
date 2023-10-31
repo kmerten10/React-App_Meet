@@ -1,6 +1,7 @@
 import CitySearch from './components/CitySearch';
 import EventList from './components/EventList';
 import CityEventsChart from './components/CityEventsChart';
+import EventGenresChart from './components/EventsGenresChart';
 import NumberOfEvents from './components/NumberOfEvents';
 import { getEvents, extractLocations } from './api';
 import { useEffect, useState } from 'react';
@@ -8,7 +9,6 @@ import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 
 
 import './App.css';
-// import EventGenresChart from './components/EventsGenresChart';
 
 
 const App = () => {
@@ -51,12 +51,18 @@ const App = () => {
         allLocations={allLocations}
         setCurrentCity={setCurrentCity}
         setInfoAlert={setInfoAlert} />
-      <div className='charts-container'>
-        <CityEventsChart allLocations={allLocations} events={events} />
-        {/* <EventGenresChart events={events} /> */}
+
+      <div className='events-container'>
+        <EventList events={events} />
       </div>
-      <EventList events={events} />
-    </div>
+
+      <div className='charts-container'>
+        <EventGenresChart events={events} />
+
+        <CityEventsChart allLocations={allLocations} events={events} />
+      </div>
+
+    </div >
   );
 }
 
