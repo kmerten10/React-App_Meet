@@ -44,7 +44,7 @@ Given: the app shortcut was added to the Home Screen
 When: the user selects the shortcut
 Then: the app will open from the home screen
 
-Scenario:Display charts visualizing event details
+Scenario: Display charts visualizing event details
 Given: the event details were loaded into a chart
 When: the user selects the given event 
 Then: the appropriate chart will be displayed for that event
