@@ -6,10 +6,12 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
 
         let infoText;
         if (isNaN(value) || value > 50 || value <= 0) {
-            setErrorAlert("Please enter a number between 0 and 50");
+            infoText = 'Please enter a number between 0 and 50';
+            setErrorAlert(infoText);
         } else {
+            infoText = '';
             setCurrentNOE(value);
-            setErrorAlert('');
+            setErrorAlert(infoText);
         }
     };
 
