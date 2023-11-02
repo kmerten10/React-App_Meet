@@ -1,5 +1,6 @@
 import mockData from './mock-data';
 import NProgress from 'nprogress';
+import axios from 'axios';
 
 export const extractLocations = (events) => {
     const extractedLocations = events.map((event) => event.location);
@@ -8,27 +9,33 @@ export const extractLocations = (events) => {
 };
 
 const checkToken = async (accessToken) => {
-    const response = await fetch(
+    const result = await fetch(
         `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
-    );
-    const result = await response.json();
-    if (result) {
-        NProgress.done();
-        localStorage.setItem("lastEvents", JSON.stringify(result.events));
-        return result.events;
-    } else return null;
+    )
+        .then((res) => res.json())
+        .catch((error) => error.json());
+    return result;
 };
 
 const getToken = async (code) => {
-    const encodeCode = encodeURIComponent(code);
-    const response = await fetch(
-        'https://dfwvtewl79.execute-api.us-east-1.amazonaws.com/dev/api/token' + '/' + encodeCode
-    );
-    const { access_token } = await response.json();
-    access_token && localStorage.setItem("access_token", access_token);
+    try {
+        const encodeCode = encodeURIComponent(code);
 
-    return access_token;
+        const response = await fetch(
+            'https://dfwvtewl79.execute-api.us-east-1.amazonaws.com/dev/api/token' + '/' + encodeCode
+        );
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        const { access_token } = await response.json();
+        access_token && localStorage.setItem("access_token", access_token);
+
+        return access_token;
+    } catch (error) {
+        error.json();
+    }
 };
+
 
 const removeQuery = () => {
     let newurl;
@@ -63,19 +70,20 @@ export const getEvents = async () => {
     if (token) {
         removeQuery();
         const url = "https://dfwvtewl79.execute-api.us-east-1.amazonaws.com/dev/api/get-events" + "/" + token;
-        const response = await fetch(url);
-        const result = await response.json();
-        if (result) {
-            NProgress.done();
-            localStorage.setItem('lastEvents', JSON.stringify(result.events))
-            return result.events;
-        } else return null;
+        const result = await axios.get(url);
+        if (result.data) {
+            var locations = extractLocations(result.data.events);
+            localStorage.setItem('lastEvents', JSON.stringify(result.data));
+            localStorage.setItem('locations', JSON.stringify(locations))
+
+        }
+        NProgress.done();
+        return result.data.events;
     }
 };
 
 export const getAccessToken = async () => {
     const accessToken = localStorage.getItem('access_token');
-
     const tokenCheck = accessToken && (await checkToken(accessToken));
 
     if (!accessToken || tokenCheck.error) {
@@ -83,11 +91,10 @@ export const getAccessToken = async () => {
         const searchParams = new URLSearchParams(window.location.search);
         const code = await searchParams.get('code');
         if (!code) {
-            const response = await fetch(
+            const results = await axios.get(
                 "https://dfwvtewl79.execute-api.us-east-1.amazonaws.com/dev/api/get-auth-url"
             );
-            const result = await response.json();
-            const { authUrl } = result;
+            const { authUrl } = results.data;
             return (window.location.href = authUrl);
         }
         return code && getToken(code);
