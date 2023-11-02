@@ -20,7 +20,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
             <p>Select Number of Events</p>
             <input
                 type="text"
-                defaultValue="32"
+                defaultValue="64"
                 onChange={handleInputChanged}
                 data-testid="events-count"
             />
