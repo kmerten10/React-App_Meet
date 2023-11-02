@@ -5,7 +5,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
         const value = event.target.value;
 
         let infoText;
-        if (isNaN(value) || value > 50 || value <= 0) {
+        if (isNaN(value) || value > 300 || value <= 0) {
             infoText = 'Please enter a number between 0 and 50';
             setErrorAlert(infoText);
         } else {
@@ -17,10 +17,10 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
 
     return (
         <div id="events-count">
-            <p>Select Number of Events</p>
+            <p>Enter a Number</p>
             <input
                 type="text"
-                defaultValue="64"
+                defaultValue="32"
                 onChange={handleInputChanged}
                 data-testid="events-count"
             />

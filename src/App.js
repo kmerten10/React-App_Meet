@@ -6,14 +6,14 @@ import NumberOfEvents from './components/NumberOfEvents';
 import { getEvents, extractLocations } from './api';
 import { useEffect, useState } from 'react';
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
-
+import dev from '../src/assets/dev.jpg';
 
 import './App.css';
 
 
 const App = () => {
   const [events, setEvents] = useState([]);
-  const [currentNOE, setCurrentNOE] = useState(32);
+  const [currentNOE, setCurrentNOE] = useState();
   const [allLocations, setAllLocations] = useState([]);
   const [currentCity, setCurrentCity] = useState("See all cities");
   const [infoAlert, setInfoAlert] = useState("");
@@ -21,7 +21,6 @@ const App = () => {
   const [warningAlert, setWarningAlert] = useState("");
 
 
-  //why does useEffect have to go first?
   useEffect(() => {
     if (navigator.onLine) {
       setWarningAlert("");
@@ -38,20 +37,28 @@ const App = () => {
     setEvents(filteredEvents.slice(0, currentNOE));
     setAllLocations(extractLocations(allEvents));
   }
-
   return (
     <div className="App">
-      <div className="alerts-container">
-        {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
-        {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
-        {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
+      <div className='header'>
+        <img src={dev} alt="Logo" />
+        <div className='header-container'>
+          <div className='text-container'>
+            <h1>Find Your Next Dev Event!</h1>
+            <div >
+              {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
+              {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
+              {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
+            </div>
+            <div className='search'>
+              <CitySearch
+                allLocations={allLocations}
+                setCurrentCity={setCurrentCity}
+                setInfoAlert={setInfoAlert} />
+              <NumberOfEvents currentNOE={currentNOE} setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert} />
+            </div>
+          </div>
+        </div>
       </div>
-      <NumberOfEvents currentNOE={currentNOE} setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert} />
-      <CitySearch
-        allLocations={allLocations}
-        setCurrentCity={setCurrentCity}
-        setInfoAlert={setInfoAlert} />
-
       <div className='events-container'>
         <EventList events={events} />
       </div>

@@ -49,13 +49,20 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
                 onChange={handleInputChanged}
             />
             {showSuggestions ?
-                <ul className="suggestions">
-                    {suggestions.map((suggestion) => {
-                        return <li onClick={handleItemClicked} key={suggestion}>{suggestion}</li>
-                    })}
-                    <li key='See all cities' onClick={handleItemClicked}>
-                        <b>See all cities</b>
-                    </li>
+                <ul>
+                    <div className="suggestions">
+
+
+                        <div className="see-all" key='See all cities' onClick={handleItemClicked}>
+                            <b>See all cities</b>
+                        </div>
+                        <div className="other-cities">
+                            {suggestions.map((suggestion) => {
+                                return <li onClick={handleItemClicked} key={suggestion}>{suggestion}</li>
+                            })}
+                        </div>
+                    </div>
+
                 </ul>
                 : null
             }
