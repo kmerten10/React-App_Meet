@@ -6,7 +6,7 @@ const Event = ({ event }) => {
     return (
         <li className="event">
             <h3>{event.summary}</h3>
-            <p>{event.created}</p>
+            <p>{event.start.dateTime}</p>
             <p>{event.location}</p>
             <button className='details-btn'
                 onClick={() => {
