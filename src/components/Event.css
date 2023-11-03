@@ -10,10 +10,9 @@
     border: 1px solid white;
 }
 
-
-/* .event:hover {
+.event:hover {
     transform: scale(1.1);
-} */
+}
 
 button {
     border: none;
@@ -34,7 +33,6 @@ button {
 button:hover {
     background-color: #b0aeca;
     color: white;
-
 }
 
 li {
@@ -42,4 +40,48 @@ li {
     list-style-type: none;
     padding: 20px;
     margin: 20px;
+}
+
+.modalBackground {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(176, 174, 202, .5);
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    justify-content: center;
+    align-content: center;
+}
+
+.modalContainer {
+    width: 500px;
+    height: 400px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: #354467, 0px, 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    position: fixed;
+    justify-content: center;
+    align-content: center;
+    z-index: 2;
+    margin-top: 10%;
+    padding-bottom: 60px;
+}
+
+.X {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    color: #354467;
+}
+
+.X:hover {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    color: #354467;
 }

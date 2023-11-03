@@ -25,8 +25,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
                 data-testid="events-count"
             />
         </div>
-    );
-    ;
+    )
 }
 
 export default NumberOfEvents;

@@ -28,6 +28,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding-top: 20px;
+  width: 100%;
+  height: auto;
 }
 
 img {
@@ -39,12 +41,8 @@ img {
 
 .header {
   background-color: #354467;
-}
-
-.header-container {
-  display: grid;
-  flex-direction: column;
   padding-bottom: 40px;
+
 }
 
 h1 {

@@ -41,22 +41,20 @@ const App = () => {
     <div className="App">
       <div className='header'>
         <img src={dev} alt="Logo" />
-        <div className='header-container'>
-          <div className='text-container'>
-            <h1>Find Your Next Dev Event!</h1>
-            <div >
-              {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
-              {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
-              {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
-            </div>
-            <div className='search'>
-              <CitySearch
-                allLocations={allLocations}
-                setCurrentCity={setCurrentCity}
-                setInfoAlert={setInfoAlert} />
-              <NumberOfEvents currentNOE={currentNOE} setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert} />
-            </div>
-          </div>
+        <div className='content-container'>
+          <h1>Find Your Next Dev Event!</h1>
+        </div>
+        <div>
+          {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
+          {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
+          {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
+        </div>
+        <div className='search'>
+          <CitySearch
+            allLocations={allLocations}
+            setCurrentCity={setCurrentCity}
+            setInfoAlert={setInfoAlert} />
+          <NumberOfEvents currentNOE={currentNOE} setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert} />
         </div>
       </div>
       <div className='events-container'>

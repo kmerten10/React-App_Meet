@@ -17,8 +17,11 @@ const Event = ({ event }) => {
                     }}
                 >View Details
                 </button>
-                {showDetails && <Modal closeDetails={setShowDetails} />}
             </li >
+
+            <div className='modalIndex'>
+                {showDetails && <Modal event={event} closeDetails={setShowDetails} />}
+            </div>
         </div >
     );
 }
