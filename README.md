@@ -4,17 +4,17 @@ A serverless, React progressive web app that uses a test-driven development tech
 
 ## Key Features
 
--Filter Events by City.
+-Filter Events by City
 
--Show/Hide Event Details.
+-Show/Hide Event Details
 
--Specify Number of Events.
+-Specify Number of Events
 
--Use the App When Offline.
+-Use the App When Offline
 
--Add an App Shortcut to the Home Screen.
+-Add an App Shortcut to the Home Screen
 
--Display Charts Visualizing Event Details.
+-Display Charts Visualizing Event Details
 
 ## User Stories & Scenarios
 
