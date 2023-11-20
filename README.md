@@ -21,14 +21,14 @@ A serverless, React progressive web app that uses a test-driven development tech
 ## User Stories & Scenarios
 
 Scenario: Filter events by city
-Given: a function was written to filter events by cities
-When: the user selects a city within the filter
-Then: the function will return the events in the selected city
+-Given: a function was written to filter events by cities
+-When: the user selects a city within the filter
+-Then: the function will return the events in the selected city
 
 Scenario: Show/hide event details
-Given: the list of events was loaded
-When: the user clicks on “Show details” for an event
-Then: the event element will be expanded to show the event details including
+-Given: the list of events was loaded
+-When: the user clicks on “Show details” for an event
+-Then: the event element will be expanded to show the event details including
     Name of Event
     Time and Date of event
     Locatin of Event
@@ -37,24 +37,24 @@ Then: the event element will be expanded to show the event details including
     hide/show details button
 
 Scenario: Specify number of events
-Given: the list of events was loaded
-When: the user selects a number of events
-Then: the number of events displayed will update based on the user input
+-Given: the list of events was loaded
+-When: the user selects a number of events
+-Then: the number of events displayed will update based on the user input
 
 Scenario: Use the app when offline
-Given: the app was created to be functional offline
-When: the user uses the app offline
-Then: the functionalities will still be functional
+-Given: the app was created to be functional offline
+-When: the user uses the app offline
+-Then: the functionalities will still be functional
 
 Scenario: Add an app shortcut to the Home Screen
-Given: the app shortcut was added to the Home Screen
-When: the user selects the shortcut
-Then: the app will open from the home screen
+-Given: the app shortcut was added to the Home Screen
+-When: the user selects the shortcut
+-Then: the app will open from the home screen
 
 Scenario: Display charts visualizing event details
-Given: the event details were loaded into a chart
-When: the user selects the given event 
-Then: the appropriate chart will be displayed for that event
+-Given: the event details were loaded into a chart
+-When: the user selects the given event 
+-Then: the appropriate chart will be displayed for that event
 
 ## Tech Used:
 - React 
