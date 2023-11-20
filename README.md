@@ -2,6 +2,8 @@
 
 A serverless, React progressive web app that uses a test-driven development technique. The application uses the Google Calendar API to fetch upcoming events.
 
+![Screenshot 2023-11-03 at 11 42 19 AM](https://github.com/kmerten10/React-App_Meet/assets/127905952/e02ce6c3-fc5e-496a-89f2-24c86feeaafd)
+
 ## Key Features
 
 -Filter Events by City
@@ -54,8 +56,14 @@ Given: the event details were loaded into a chart
 When: the user selects the given event 
 Then: the appropriate chart will be displayed for that event
 
-## Serverless Function Usage
-In this app, serverless functions will be used for authentication by requesting and retrieving access tokens.
+## Tech Used:
+React 
+Test Driven Development
+Google Calendar API & OAuth2
+Serverless function (AWS lambda)
+PWA (installable, online & offline application)
+Data Visualization
+
 
 
 
