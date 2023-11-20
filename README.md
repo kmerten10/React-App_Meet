@@ -29,12 +29,12 @@ Scenario: Show/hide event details
 - Given: the list of events was loaded
 - When: the user clicks on “Show details” for an event
 - Then: the event element will be expanded to show the event details including
-     Name of Event
-     Time and Date of event
-     Locatin of Event
-     About the Event
-     Button to view in google calendar
-     Hide/show details button
+     - Name of Event
+     - Time and Date of event
+     - Locatin of Event
+     - About the Event
+     - Button to view in google calendar
+     - Hide/show details button
 
 Scenario: Specify number of events
 - Given: the list of events was loaded
