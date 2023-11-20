@@ -57,13 +57,13 @@ When: the user selects the given event
 Then: the appropriate chart will be displayed for that event
 
 ## Tech Used:
-React 
-Test Driven Development
-Google Calendar API & OAuth2
-Serverless function (AWS lambda)
-PWA (installable, online & offline application)
-Data Visualization
+- React 
+- Test Driven Development
+- Google Calendar API & OAuth2
+- Serverless function (AWS lambda)
+- PWA (installable, online & offline application)
+- Data Visualization
 
-
-
+## Project Link:
+Github: https://github.com/kmerten10/React-App_Meet.git
 
